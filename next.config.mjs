@@ -1,8 +1,8 @@
-const path = require('path');
+import path from 'path';
 
-module.exports = {
+export default {
   webpack: (config) => {
-    config.resolve.alias['@'] = path.join(__dirname, 'src');
+    config.resolve.alias['@'] = path.join(process.cwd(), 'src');
     return config;
   },
 };
