@@ -1,8 +1,10 @@
-import path from 'path';
+import { join } from 'path';
 
-export default {
+const nextConfig = {
   webpack: (config) => {
-    config.resolve.alias['@'] = path.join(process.cwd(), 'src');
+    config.resolve.alias['@'] = join(process.cwd(), 'src');
     return config;
   },
 };
+
+export default nextConfig;
