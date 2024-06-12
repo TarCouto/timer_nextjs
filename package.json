@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@eslint-community/eslint-utils": "^4.2.0",
     "@hookform/resolvers": "^3.6.0",
     "date-fns": "^3.6.0",
     "eslint": "^8.57.0",
