@@ -3,8 +3,8 @@ import { useContext } from 'react'
 import { HistoryContainer, HistoryList, Status } from './styles'
 import { formatDistanceToNow } from 'date-fns'
 import { ptBR } from 'date-fns/locale';
-import { CyclesContext } from '@/context/CyclesContext'
-import { DefaultLayout } from '@/layouts/DefaultLayout'
+import { CyclesContext } from '../../context/CyclesContext';
+import { DefaultLayout } from '../../layouts/DefaultLayout'
 
 export default function History() {
   const { cycles } = useContext(CyclesContext)

@@ -5,7 +5,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import * as zod from 'zod'
 import { useContext } from 'react'
 
-import { CyclesContext } from '@/context/CyclesContext'
+import { CyclesContext } from '@/context/CyclesContext';
 import { CountDown } from '@/components/CountDown'
 import { NewCycleForm } from '@/components/NewCycleForm'
 import { HomeContainer, StartCountdownButton, StopCountdownButton } from './styles'
