@@ -4,7 +4,6 @@ import { CountDownContainer, Separator } from './styles'
 import { differenceInSeconds } from 'date-fns'
 import { CyclesContext } from '@/context/CyclesContext'
 
-
 export function CountDown() {
   const {
     activeCycle,
@@ -17,7 +16,7 @@ export function CountDown() {
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
 
   useEffect(() => {
-    let interval: number
+    let interval: NodeJS.Timeout | number
 
     if (activeCycle) {
       interval = setInterval(() => {
@@ -29,7 +28,7 @@ export function CountDown() {
         if (secondsDifference >= totalSeconds) {
           markCurrentCycleAsFinished()
           setSecondsPassed(totalSeconds)
-          clearInterval(interval)
+          clearInterval(interval as NodeJS.Timeout)
         } else {
           setSecondsPassed(secondsDifference)
         }
@@ -37,7 +36,7 @@ export function CountDown() {
     }
 
     return () => {
-      clearInterval(interval)
+      clearInterval(interval as NodeJS.Timeout)
     }
   }, [
     activeCycle,
