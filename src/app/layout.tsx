@@ -6,6 +6,7 @@ import { GlobalStyle } from '../styles/global';
 import { DefaultTheme } from '../styles/theme/default';
 import { CyclesContextProvider } from '../context/CyclesContext';
 
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
